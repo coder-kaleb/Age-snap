@@ -4,10 +4,83 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
     <title>Vite + TS</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-gray-100">
+    <div id="app">
+      <main
+        class="mx-auto mt-32 max-w-xl rounded-xl  rounded-br-[80px] bg-white p-10"
+      >
+        <form
+          class="font-poppins relative flex gap-12 border-b border-gray-300 pb-8 pr-12"
+        >
+          <div class="flex flex-col space-y-2">
+            <label class="text-sm font-medium uppercase text-gray-500" for="day"
+              >day</label
+            >
+            <input
+              class="w-24 rounded-md border border-gray-300 py-2 pl-3 text-2xl font-extrabold text-black"
+              type="text"
+              id="day"
+            />
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label
+              class="text-sm font-medium uppercase text-gray-500"
+              for="month"
+              >month</label
+            >
+            <input
+              class="w-24 rounded-md border border-gray-300 py-2 pl-3 text-2xl font-extrabold text-black"
+              type="text"
+              id="month"
+            />
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label
+              class="text-sm font-medium uppercase text-gray-500"
+              for="year"
+              >year</label
+            >
+            <input
+              class="w-24 rounded-md border border-gray-300 py-2 pl-3 text-2xl font-extrabold text-black"
+              type="text"
+              id="year"
+            />
+          </div>
+          <button
+            class="flex h-16 w-16 items-center justify-center rounded-full bg-purple-700 p-4 text-center outline-none absolute -bottom-7 right-0"
+          >
+            <img
+              src="./public/assets/images/icon-arrow.svg"
+              alt=""
+              class="object-contain"
+            />
+          </button>
+        </form>
+        <!-- <hr class="border-b border-gray-500 w-[400px]"> -->
+        <div>
+          <h1>
+            <span></span>
+            <span></span>
+            <span></span>
+          </h1>
+        </div>
+      </main>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
