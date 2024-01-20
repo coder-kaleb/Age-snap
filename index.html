@@ -22,13 +22,17 @@
   <body class="bg-gray-100">
     <div id="app" class="max-mobile:mx-5">
       <main
-        class="mx-auto mt-20 max-w-xl rounded-xl rounded-br-[80px] bg-white p-10 max-mobile:mt-28 max-mobile:px-6"
+        class="mx-auto mt-20 max-w-xl rounded-xl rounded-br-[200px] bg-white p-10 max-mobile:mt-28 max-mobile:px-6"
       >
         <div
           class="relative mb-16 flex gap-12 border-b border-gray-300 pb-12 font-poppins max-mobile:gap-6 max-mobile:pb-16"
+          id="cont"
         >
           <div class="flex flex-col space-y-2">
-            <label class="text-sm font-medium uppercase text-gray-500" for="day"
+            <label
+              class="text-sm font-medium uppercase text-gray-500"
+              for="day"
+              id="labelDay"
               >day</label
             >
             <input
@@ -36,14 +40,16 @@
               type="tel"
               id="day"
             />
-            <small class="text-light-red max-mobile:text-[10px]" id="error-day"
-              >Must be valid day</small
-            >
+            <small
+              class="text-light-red max-mobile:text-[10px]"
+              id="error-day"
+            ></small>
           </div>
           <div class="flex flex-col space-y-2">
             <label
               class="text-sm font-medium uppercase text-gray-500"
               for="month"
+              id="labelMonth"
               >month</label
             >
             <input
@@ -51,14 +57,16 @@
               type="tel"
               id="month"
             />
-            <small class="text-light-red max-mobile:text-[10px]" id="error-day"
-              >Must be valid months</small
-            >
+            <small
+              class="text-light-red max-mobile:text-[10px]"
+              id="error-day"
+            ></small>
           </div>
           <div class="flex flex-col space-y-2">
             <label
               class="text-sm font-medium uppercase text-gray-500"
               for="year"
+              id="labelYear"
               >year</label
             >
             <input
@@ -66,12 +74,13 @@
               type="tel"
               id="year"
             />
-            <small class="text-light-red max-mobile:text-[10px]" id="error-year"
-              ></small
-            >
+            <small
+              class="text-light-red max-mobile:text-[10px]"
+              id="error-year"
+            ></small>
           </div>
           <button
-            class="bg-purple-700 absolute -bottom-7 right-0 flex h-16 w-16 items-center justify-center rounded-full bg-purple p-4 text-center outline-none hover:bg-indigo-700 max-mobile:right-[40%]"
+            class="bg-purple-700 absolute -bottom-7 right-0 flex h-16 w-16 items-center justify-center rounded-full bg-purple p-4 text-center outline-none transition duration-1000 hover:bg-indigo-700 max-mobile:right-[40%]"
             id="btn-submit"
           >
             <img
@@ -84,9 +93,9 @@
         <!-- <hr class="border-b border-gray-500 w-[400px]"> -->
         <div>
           <h1 class="text-7xl font-extrabold italic">
-            <p><span class="text-purple"></span> years</p>
-            <p><span class="text-purple"></span> months</p>
-            <p><span class="text-purple">26</span> days</p>
+            <p><span class="text-purple" id="output-year"></span> years</p>
+            <p><span class="text-purple" id="output-month"></span> months</p>
+            <p><span class="text-purple" id="output-day"></span> days</p>
           </h1>
         </div>
       </main>
