@@ -32,7 +32,7 @@ const calculateAge = (e: Event) => {
     if (e.target === dayEl) {
       if (dayRegex.test(e.target.value)) {
         errDay.textContent = "";
-        labelMonth.classList.remove("text-light-red");
+        labelDay.classList.remove("text-light-red");
         isvalid = true;
       } else {
         errDay.textContent = "Must be valid days";
@@ -42,24 +42,21 @@ const calculateAge = (e: Event) => {
     } else if (e.target === monthEl) {
       if (monthRegex.test(e.target.value)) {
         errMonth.textContent = "";
-        labelMonth.classList.remove("text-light-red");
-
+        labelMonth.classList.contains("text-light-red") ? labelMonth.classList.remove("text-light-red") : ""
         isvalid = true;
       } else {
         errMonth.textContent = "Must be valid months";
         labelMonth.classList.add("text-light-red");
-
         isvalid = false;
       }
     } else if (e.target === yearEl) {
       if (yearRegex.test(e.target.value)) {
         errYear.textContent = "";
-        labelMonth.classList.remove("text-light-red");
+        labelYear.classList.remove("text-light-red");
         isvalid = true;
       } else {
-        errMonth.textContent = "Must be valid years";
-        labelMonth.classList.add("text-light-red");
-
+        errYear.textContent = "Must be valid years";
+        labelYear.classList.add("text-light-red");
         isvalid = false;
       }
     }
@@ -121,7 +118,7 @@ const ageResult = () => {
     remainingDays = Math.max(0, remainingDays);
     if (remainingDays > 30) {
       remainingMonths += 1;
-      remainingDays = 0;
+      remainingDays = 1;
     }
 
     outputYear.textContent = `${ageInYears}`;
